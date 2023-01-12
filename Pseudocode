@@ -1,0 +1,72 @@
+Pseudocode
+
+Coding in Swift
+
+   \\create song class
+
+class Song {
+   \\ variables
+title.String
+autor.String 
+Lyrincs.String
+
+   \\ methods 
+    \\ create an instance from XML file
+    \\ regsters from disc
+init(xml.String)
+init ()
+
+setTitle (t.String)
+setAuthor (a.String)
+setLyrics (l.String)
+
+   \\method 
+   \\phrase
+Evaluation (phrase.String) > Int 
+    \\word
+Evaluation (w.Word) > Int 
+     \\ memory
+Report() > String
+    \\ method that evaluate the song aginst the phrase and gives you back a result (number) 
+}
+
+    \\create class database
+     \\ create\holds database toghether
+
+class DB {
+     \\ remembers how many songs are registered 
+Num.Int
+Record [ array]
+
+init(xml.String)
+   \\ creats a blank database
+init()
+
+   \\ methods
+Add(Song)
+    \\ buttons
+Report() > String
+First() > Song
+Next() >Song
+     \\ Boolean logic (is it the last record? True or False)
+IsLast() > Bool
+}
+
+    \\create word class
+
+class Word {
+word.String
+init (w.String)
+
+   \\method
+    \\ this method compares the first and second word and tells you how good is the match giving you back a intiger number
+Match (w.Word) > Int
+}
+
+
+ 
+
+
+
+
+
