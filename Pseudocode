@@ -11,8 +11,7 @@ autor.String
 Lyrincs.String
 
    \\ methods 
-    \\ create an instance from XML file
-    \\ regsters from disc
+    \\ create an instance from XML file. 
 init(xml.String)
 init ()
 
@@ -34,7 +33,7 @@ Report() > String
      \\ create\holds database toghether
 
 class DB {
-     \\ remembers how many songs are registered 
+     \\ remembers how many songs are registered with a whole number. 
 Num.Int
 Record [ array]
 
