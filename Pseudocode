@@ -119,7 +119,7 @@ S2.removeFirst()
 S1.removeFirst () 
 s.removeFirst ()
  }
-   // return the resul of r * (whole/ decimal number) 
+   // return the result of r * (whole/ decimal number) 
  return r
  
  }
