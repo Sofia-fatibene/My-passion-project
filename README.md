@@ -4,5 +4,5 @@ The success of a project is often more dependent on the interest and passion of 
 
 ## **The music Researcher**
 This program focuses on the use of classes and some specific methods (for example the evaluation of words.) It helps search songs who are insert in the database and recognises them. The music reasercher wuold list you the name of the authour and the name of the song. 
-In the future I wuold like to create my own database and upload all of the songs and the possibility of playing them. 
+In the future I wuold like to create my own database and upload all of the songs and have the possibility of listening to them. 
 
