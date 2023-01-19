@@ -2,16 +2,16 @@ Pseudocode
 
 Coding in Swift
 
-   \\create song class
+   //create song class
 
 class Song {
-   \\ variables
+   // variables
 title.String
 autor.String 
 Lyrincs.String
 
-   \\ methods 
-    \\ create an instance from XML file. 
+   // methods 
+    // create an instance from XML file. 
 init(xml.String)
 init ()
 
@@ -19,48 +19,116 @@ setTitle (t.String)
 setAuthor (a.String)
 setLyrics (l.String)
 
-   \\method 
-   \\phrase
+   //method 
+   //phrase
 Evaluation (phrase.String) > Int 
-    \\word
+    //word
 Evaluation (w.Word) > Int 
-     \\ memory
+     // memory
 Report() > String
-    \\ method that evaluate the song aginst the phrase and gives you back a result (number) 
+    // method that evaluate the song aginst the phrase and gives you back a result (number) 
 }
 
-    \\create class database
-     \\ create\holds database toghether
+    //create class database
+     // create\holds database toghether
 
 class DB {
-     \\ remembers how many songs are registered with a whole number. 
+     // remembers how many songs are registered with a whole number. 
 Num.Int
 Record [ array]
 
 init(xml.String)
-   \\ creats a blank database
+   // creats a blank database
 init()
 
-   \\ methods
+   // methods
 Add(Song)
-    \\ buttons
+    // buttons
 Report() > String
 First() > Song
 Next() >Song
-     \\ Boolean logic (is it the last record? True or False)
+     // Boolean logic (is it the last record? True or False)
 IsLast() > Bool
 }
 
-    \\create word class
+ //create word class
 
 class Word {
 word.String
 init (w.String)
 
-   \\method
-    \\ this method compares the first and second word and tells you how good is the match giving you back a intiger number
-Match (w.Word) > Int
+   //method
+  //this method compares the first and second word and tells you how good is the match giving you back a intiger number
+Evaluation  (w.Word) > Int
 }
+
+   // Create method 
+func Evaluation (_ w:word) > Double {
+
+   // using the String created in Word class 
+if word == w.word  {
+
+   // likely to use 1.0 it's easier 
+return ( whole number)
+
+}
+
+   // create a vareble for the whole number (in this case 1.0) that will return the rusult
+var r = 1.0 
+   // create a version for the word that you will confront with another (e.g. dog and dug)
+var s = word 
+var S1 + w.word 
+    // create a for loop that counts the number of letters in dog (starting from 0)
+fon _ in 0 ..< s.count {
+
+let c = s.first
+let C1 = S1.first 
+   // I'm assuming that C1 will not be nil 
+if C1  (is) !=  nil {
+   // multiplicate the whole number with r (assuming the two word are identical the program should stop her)
+r = r * (whole number)
+} else {
+   //new version of the word 
+var S2 = w.word 
+   // identical loop from before but with a new version of the word 
+for _ in 0.. < S2.count + 1 {
+let C2 = S2.first 
+if C2 == nil {
+    // multiplicate the decimal number with r (assuming the two word are different it will give you a low decimal number) 
+ r = r * (decimal number) 
+    // stops loop from continuing 
+ break 
+} else  {
+    
+if c! == C2! { 
+  // assuming the words are similare (right letter in the wrong spot) it should give you a deciml number but much more higher then the first one 
+r = r * (decimal number > then the first one)
+   // stop loop 
+break 
+
+
+} else {
+
+S2.removeFirst()
+              }
+           }
+         }
+      }
+   }
+   // S1 and s have to be romoved to be able to confront he two words in the three different states 
+S1.removeFirst () 
+s.removeFirst ()
+ }
+   // return the resul of r * (whole/ decimal number) 
+ return r
+ 
+ }
+
+
+
+
+
+
 
 
  
