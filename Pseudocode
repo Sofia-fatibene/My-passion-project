@@ -38,7 +38,7 @@ Num.Int
 Record [ array]
 
 init(xml.String)
-   // creats a blank database
+   // create a blank database
 init()
 
    // methods
@@ -101,7 +101,7 @@ if C2 == nil {
 } else  {
     
 if c! == C2! { 
-  // assuming the words are similare (right letter in the wrong spot) it should give you a deciml number but much more higher then the first one 
+  // assuming the words are similare (right letter in the wrong spot) it should give you a decimal number but much more higher then the first one 
 r = r * (decimal number > then the first one)
    // stop loop 
 break 
