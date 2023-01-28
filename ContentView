@@ -1,0 +1,53 @@
+//
+//  ContentView.swift
+//  PrintoPrinto
+//
+//  Created by Sofia on 24/01/23.
+//
+
+import SwiftUI
+
+struct ContentView: View {
+    @State var SearchField:String = ""
+    @State var Result:String = ""
+    
+    var body: some View {
+        VStack {
+            Text("The Music Researcher")
+                .font(.title)
+                .foregroundColor(Color.purple)
+            Image(systemName: "waveform.and.magnifyingglass")
+                .imageScale(.large)
+                .foregroundColor(.yellow)
+            TextField("", text: $SearchField)
+                .onSubmit {
+                    query()
+                }
+            Text(Result)
+                .multilineTextAlignment(.leading)
+                .frame(width: 400.0, height: 200.0)
+        }
+        .padding()
+    }
+    
+    func query() {
+        if SearchField == "" {
+            Result = ""
+        } else {
+            let r = DB.Sort(by: Phrase(SearchField))
+            Result = ""
+            for n in r {
+                Result += "\(n)\n"
+            }
+        }
+    
+    }
+    
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+    
+}
