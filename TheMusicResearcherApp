@@ -1,0 +1,58 @@
+//
+//  PrintoPrintoApp.swift
+//  PrintoPrinto
+//
+//  Created by Sofia on 24/01/23.
+//
+
+import SwiftUI
+
+
+let PathString = "DB/Console/"
+let Log = OutStream(path: PathString)
+var Out = OutStream(path: PathString)
+let StartTime = Date()
+var DB = DBSong.Load(path:"DB/")
+
+
+@main
+class PrintoPrintoApp: App {
+
+#if os(macOS)
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+#endif
+    
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+    }
+    
+    required init(){
+        Log.Open("Log.txt", Clear: false)
+        Log.Write("Session on \(StartTime)ms\n", BlockConsole: true)
+        Out.ConsoleOn()
+        Out.Open("Output.txt")      // to clear add Clear:
+        Out.Pipe(to: Log)
+        Out.Write("Hello, World!\n")
+    }
+    
+    
+    
+
+}
+
+
+#if os(macOS)
+class AppDelegate: NSObject, NSApplicationDelegate {
+
+    func applicationWillTerminate(_ aNotification: Notification) {
+        DB.Save()
+        Out.Write("Bye, World!\n")
+        Out.Close()
+        let EndTime = Date()
+        Log.Write("Session off \(EndTime)ms  De=\(EndTime.timeIntervalSince(StartTime))ms\n\n\n", BlockConsole: true)
+        Log.Close()
+    }
+}
+#endif
