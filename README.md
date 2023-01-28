@@ -24,6 +24,10 @@ Consoles
    |
 Files > MyDBSong.original.xml, MyDBSong.xml
 
+Music Researcher (APP) 
+    |
+Files > TheMusicResearcherApp, Content View (main of the app)
+
 
   
    
